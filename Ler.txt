@@ -1,0 +1,17 @@
+
+# contas_py
+
+# install python and install pip
+
+# Create environment 
+-> python -m venv venv
+
+# install django
+-> pip install django
+
+# Acess activate
+
+# run app 
+-> python manage.py runserver
+
+
