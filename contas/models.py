@@ -3,10 +3,19 @@ from django.db import models
 class Categoria(models.Model):
     nome = models.CharField(max_length=100)
     dt_criacao = models.DateField(auto_now_add=True)
+    def __str__(self):
+        return self.nome
 
 class Transacao(models.Model):
-    data = models.DateField(auto_now_add=True)
+    data = models.DateField()
     descricao = models.CharField(max_length=200)
     valor = models.DecimalField(max_digits=7, decimal_places=2)
     categ = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    observacoes = models.TextField()
+    observacoes = models.TextField(null=True, blank=True)
+
+    #escrita correta
+    class Meta:
+        verbose_name_plural = "Transações"
+
+    def __str__(self):
+        return self.descricao

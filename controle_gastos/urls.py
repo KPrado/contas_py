@@ -21,7 +21,5 @@ from contas.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('data/', current_datetime),
-    path('contas/', home)
-
-    # path('home/', home)
+    path('contas/', home),
 ]

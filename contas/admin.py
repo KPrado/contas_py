@@ -1,5 +1,5 @@
 from django.contrib import admin
-# testar se deu certo o banco
+# testar se deu certo o banco adicionando na /admin
 from .models import Categoria
 from .models import Transacao
 
