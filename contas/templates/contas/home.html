@@ -10,8 +10,27 @@
 body{
     color: aqua;
 }
+.data{
+    color:darkorange;
+    background-color: black;
+}
+.listagem{
+    color: black;
+}
 </style>
 <body>
     <h1><b>Mensagem Web</b></h1>
+    <p class="data">Agora sao: {{now}}</p>
+    <!-- % = inserir codigo programação  -->
+
+    <ul>
+    {% for transacao in transacoes %}
+        {% if transacao == "t1" %}
+            <li class="listagem"><b>{{ transacao }}</b></li>
+        {% else %}
+            <li class="listagem"> {{ transacao }} </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
 </body>
 </html>
